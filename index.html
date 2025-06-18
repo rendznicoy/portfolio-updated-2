@@ -1,42 +1,559 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+    <title>Alex Johnson - Portfolio</title>
 </head>
-<body>
-    <header>
-        <a href="#" class="logo">Alex</a>
 
-        <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Services</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
-            <a href="#" >Contact</a>
+<body>
+    <div class="progress-bar"></div>
+
+    <header>
+        <a href="#home" class="logo">Rene Angelo G. de los Reyes</a>
+
+        <nav id="nav">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="main.jpg" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Hi, It's <span>Alex</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
             </div>
-            <a href="#" class="btn">Hire me</a>
+        </div>
+    </header>
+
+    <section id="home" class="home">
+        <div class="container">
+            <div class="home-grid">
+                <div class="home-content">
+                    <h1>Hi, I'm <span class="highlight">Rene Angelo</span></h1>
+                    <div class="typing-container">
+                        <h3 class="typing-text">I'm a <span id="typewriter"></span></h3>
+                    </div>
+                    <p>A passionate Computer Science undergrad with hands-on exposure to various aspects of the Computer
+                        Science and IT field. Experienced in building custom applications and working across the tech
+                        stack—from frontend form layouts to backend logic.</p>
+
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/rainyjane/" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/rendznicoy" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="mailto:rendzdelosreyes@gmail.com" target="_blank" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                        <a href="tel:+639991980065" target="_blank" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    </div>
+
+                    <div class="home-actions">
+                        <a href="#contact" class="btn">Hire Me</a>
+                        <a href="#about" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="home-img">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                        alt="Rene Angelo G. de los Reyes">
+                </div>
+            </div>
         </div>
     </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Computer Science Student & Developer</h3>
+                    <p>Currently pursuing a Bachelor of Science in Computer Science at Visayas State University, I'm a
+                        passionate developer with hands-on experience in various aspects of the tech field.</p>
+                    <p>I've worked on projects ranging from pageant scoring systems to school management platforms, with
+                        expertise in both frontend and backend development using modern technologies like Laravel,
+                        Vue.js,
+                        and Python.</p>
+                    <a href="#contact" class="btn">Get In Touch</a>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">9+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.55/5.0</span>
+                        <span class="stat-label">System Quality Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Dean's List</span>
+                        <span class="stat-label">Academic Achievement</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2024</span>
+                        <span class="stat-label">Outstanding Trainee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Full-stack web development using modern technologies like React, Node.js, and Python. Creating
+                        responsive and scalable applications.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Development</h3>
+                    <p>Native and cross-platform mobile app development for iOS and Android using React Native and
+                        Flutter.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating beautiful and intuitive user interfaces with a focus on user experience and modern
+                        design principles.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Design</h3>
+                    <p>Designing and optimizing databases for performance and scalability using SQL and NoSQL
+                        technologies.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Solutions</h3>
+                    <p>Deploying and managing applications on cloud platforms like AWS, Azure, and Google Cloud
+                        Platform.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>DevOps & CI/CD</h3>
+                    <p>Setting up automated deployment pipelines and infrastructure as code for efficient development
+                        workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Laravel (PHP)</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Vue.js</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>MySQL</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Development & Tools</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>RESTful APIs</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Tailwind CSS</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Node.js</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Git & GitHub</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <h4>Visayas State University - Main Campus • Sep 2021 - July 2025</h4>
+                        <p>Dean and Chairman's List Achiever. Outstanding Computer Science Trainee - Fullstack
+                            Developer.
+                            Development Team Member for NaVi: Navigation Assistant for Viscans project.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Science, Technology, Engineering, and Mathematics Strand</h3>
+                        <h4>Ormoc City Senior High School • Jun 2019 - Mar 2021</h4>
+                        <p>STEM strand focusing on foundational knowledge in science, technology, engineering, and
+                            mathematics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Intern - Full Stack Developer</h3>
+                        <h4>Wela School Systems • Jun 2024 - Aug 2024</h4>
+                        <p>Worked across the tech stack with Frappe/ERPNext ecosystem. Enabled dynamic certificate
+                            generation, improved reporting efficiency, and streamlined academic performance tracking for
+                            multiple school clients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Freelance Developer</h3>
+                        <h4>Various Projects • 2023-Present</h4>
+                        <p>Developed custom applications including pageant scoring systems, e-commerce platforms, and
+                            inventory management solutions. Built projects using various technologies from C# to Python.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you need a full-stack
+                        developer or want to collaborate on innovative solutions, let's connect!</p>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>rendzdelosreyes@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+63 999 198 0065</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Ormoc City, Leyte, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alex Johnson. All rights reserved. Designed with ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const themeIcon = themeToggle.querySelector('i');
+
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        body.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const nav = document.getElementById('nav');
+
+        mobileMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            const icon = mobileMenu.querySelector('i');
+            icon.className = nav.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+        });
+
+        // Smooth Scrolling and Active Link Updates
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                    nav.classList.remove('active');
+                    mobileMenu.querySelector('i').className = 'fas fa-bars';
+                }
+            });
+        });
+
+        // Update active navigation link on scroll
+        function updateActiveLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Progress Bar
+        function updateProgressBar() {
+            const scrolled = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
+            document.querySelector('.progress-bar').style.width = scrolled + '%';
+        }
+
+        window.addEventListener('scroll', () => {
+            updateActiveLink();
+            updateProgressBar();
+        });
+
+        // Typewriter Effect
+        const phrases = [
+            'Full Stack Developer',
+            'Computer Science Student',
+            'Laravel Developer',
+            'Vue.js Developer'
+        ];
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typewriterElement = document.getElementById('typewriter');
+
+        function typewriter() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typewriter, typeSpeed);
+        }
+
+        // Start typewriter effect
+        typewriter();
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Simulate form submission
+            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+            this.reset();
+        });
+
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                }
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    if (entry.target.closest('#skills')) {
+                        animateSkillBars();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animations
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Hire me button functionality
+        document.querySelectorAll('.btn').forEach(btn => {
+            if (btn.textContent.trim() === 'Hire Me') {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
 </body>
+
 </html>
