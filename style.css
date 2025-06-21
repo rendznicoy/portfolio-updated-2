@@ -615,6 +615,34 @@ section {
   flex: 1;
   max-width: 80rem; /* Increased for larger images */
   margin-top: 3rem; /* Increased margin for better spacing */
+  position: relative;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  font-size: 2.4rem;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.slider-btn:first-of-type {
+  left: 1rem;
+}
+
+.slider-btn:last-of-type {
+  right: 1rem;
 }
 
 .image-content img {
@@ -628,10 +656,11 @@ section {
   .education .container,
   .experience .container {
     padding: 0 4rem;
+    max-width: 2600px;
   }
 
   .timeline {
-    max-width: 100%;
+    max-width: 2400px;
   }
 
   .timeline::after {
@@ -665,6 +694,7 @@ section {
 
   .timeline-content h3 {
     font-size: 2.2rem;
+    white-space: nowrap;
   }
 
   .timeline-content h4 {
@@ -677,7 +707,18 @@ section {
   }
 
   .timeline-date {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .timeline-content ul {
+    margin-left: 1.5rem;
+    list-style: disc;
+  }
+
+  .timeline-content li {
+    margin-bottom: 0.8rem;
   }
 }
 

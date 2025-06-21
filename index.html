@@ -250,10 +250,13 @@
                     <div class="timeline-content">
                         <div class="text-content">
                             <h3>Bachelor of Science in Computer Science</h3>
-                            <h4>Visayas State University - Main Campus • Sep 2021 - July 2025</h4>
-                            <p>Dean and Chairman's List Achiever.</p>
-                            <p>Outstanding Computer Science Trainee - Fullstack Developer.</p>
-                            <p>Development Team Member for NaVi: Navigation Assistant for Viscans project.</p>
+                            <h4>Visayas State University - Main Campus</h4>
+                            <p class="timeline-date">Sep 2021 – Jul 2025</p>
+                            <ul>
+                                <li>Dean and Chairman’s List Achiever</li>
+                                <li>Outstanding CS Trainee – Full‑stack Dev</li>
+                                <li>Dev team member, NaVi campus‑nav app</li>
+                            </ul>
                         </div>
                         <div class="image-content">
                             <img src="./assets/images/education-proof1.jpg" alt="Bachelor of Science Proof">
@@ -509,6 +512,30 @@
                 }, 300);
             }, 4000);
         }
+
+        document.querySelectorAll('.image-content').forEach((wrapper) => {
+            // collect images & create buttons
+            const imgs = Array.from(wrapper.querySelectorAll('img'));
+            if (imgs.length < 2) return;                 // skip if only one
+
+            const btnPrev = document.createElement('button');
+            const btnNext = document.createElement('button');
+            btnPrev.className = btnNext.className = 'slider-btn';
+            btnPrev.innerHTML = '&#10094;';              // ◀
+            btnNext.innerHTML = '&#10095;';              // ▶
+            wrapper.append(btnPrev, btnNext);
+
+            let idx = 0;                                // show first image
+            imgs.forEach((img, i) => img.style.display = i ? 'none' : 'block');
+
+            const show = n => {
+                imgs[idx].style.display = 'none';
+                idx = (n + imgs.length) % imgs.length;
+                imgs[idx].style.display = 'block';
+            };
+            btnPrev.onclick = () => show(idx - 1);
+            btnNext.onclick = () => show(idx + 1);
+        });
 
         // Smooth Scrolling and Active Link Updates
         const navLinks = document.querySelectorAll('.nav-link');
